@@ -401,6 +401,7 @@ public class Camera {
       recordingVideo = false;
       mediaRecorder.stop();
       mediaRecorder.reset();
+      closeCaptureSession();
       startPreview();
       result.success(videoRecordingFile.getAbsolutePath());
       videoRecordingFile = null;
